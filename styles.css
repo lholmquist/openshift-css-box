@@ -6760,7 +6760,7 @@ body {
 }
 .panel-default > .panel-heading .badge {
   color: white;
-  background: #808080;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .dotted {
   padding: 2.25em 1.6875em;
