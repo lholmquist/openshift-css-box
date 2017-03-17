@@ -1,0 +1,57 @@
+@import 'node_modules/bootstrap/less/bootstrap';
+
+@border-radius-base: 0px;
+@border-radius-large: 0px;
+@border-radius-small: 0px;
+
+@badge-border-radius: 0px;
+
+@font-size-base: 10px;
+
+@panel-heading-padding: 15px 15px;
+@panel-body-padding: 50px;
+
+@panel-default-heading-bg: red;
+@panel-default-text: white;
+@panel-default-border: red;
+
+@my-bg-size: 18px 18px;
+@my-gradient: center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%;
+@my-shadow: 0 1.5px 1.5px fade(black, 17.5%);
+
+body {
+  margin-top: 200px;
+}
+
+.panel-default > .panel-heading {
+  .box-shadow(@my-shadow);
+}
+
+.panel {
+  border: 0px;
+  .box-shadow(@my-shadow);
+}
+
+.panel-default > .panel-heading .badge {
+  color: white;
+  background: lighten(black, 50%);
+}
+
+.dotted {
+  padding: 2.25em 1.6875em;
+  background-image: -webkit-repeating-radial-gradient(@my-gradient);
+  background-image: -moz-repeating-radial-gradient(@my-gradient);
+  background-image: -ms-repeating-radial-gradient(@my-gradient);
+  background-image: repeating-radial-gradient(@my-gradient);
+  -webkit-background-size: @my-bg-size;
+  -moz-background-size: @my-bg-size;
+  background-size: @my-bg-size;
+  }
+
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
